@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity(), LuasView {
         etPanjang = findViewById(R.id.et_panjang)
         etLebar = findViewById(R.id.et_lebar)
         tvHasilLuasPersegiPanjang = findViewById(R.id.tv_hasil_luas_persegi_panjang)
-
         btnHitungLuasPersegiPanjang = findViewById(R.id.btn_hitung_luas_persegi_panjang)
         btnHitungLuasPersegiPanjang.setOnClickListener {
             val panjang = etPanjang.text.toString().trim().toFloat()
@@ -30,8 +29,8 @@ class MainActivity : AppCompatActivity(), LuasView {
 
     }
 
-    override fun hasilLuasPersegiPanjang(luas: Float, keliling: Float) {
-        tvHasilLuasPersegiPanjang.text = keliling.toString()
+    override fun hasilLuasPersegiPanjang(luas: Float) {
+
         tvHasilLuasPersegiPanjang.text = luas.toString()
     }
 
